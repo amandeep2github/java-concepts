@@ -1,0 +1,14 @@
+{  
+   "vehicleName":"Global Fund",
+   "vehicleType":"Fund",
+   "fundManagers":[  
+      {  
+         "fundManagerName":"Amandeep",
+         "startDate":"26 Nov 2016"
+      },
+      {  
+         "fundManagerName":"Amit",
+         "startDate":"27 Oct 2016"
+      }
+   ]
+}
