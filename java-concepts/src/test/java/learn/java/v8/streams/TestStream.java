@@ -1,7 +1,8 @@
-package learn.java.v8.lambda;
+package learn.java.v8.streams;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 import static org.junit.Assert.*;
@@ -34,6 +35,18 @@ public class TestStream {
 		list.stream().filter(ele -> ele.equals("2")).mapToInt(t -> Integer.getInteger(t)).forEach(
 				t ->System.out.println(t)
 				);
+		
+	}
+	
+	@Test
+	public void testListTrimString() {
+		String arr [] = new String[]{" Amandeep","Sumit "," Virender Kumar ","Amit","Mayank"," Priyank"};
+		
+		
+		List<String> list = Arrays.asList(arr);
+		List<String> list1 = list.stream().map(rec -> rec.trim()).collect(Collectors.toList());
+		assertEquals("Amandeep", list1.get(0));
+		assertEquals("Sumit", list1.get(1));
 		
 	}
 

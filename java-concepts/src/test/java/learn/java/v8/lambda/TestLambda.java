@@ -14,13 +14,14 @@ public class TestLambda {
 	@Test
 	public void testStringComparator() {
 		String[] strArr = new String[]{"B", "A", "C"};
-		Arrays.sort(strArr, new SimpleComparator().getStringComparator());
+		//Arrays.sort(strArr, new SimpleComparator().getStringComparator());
+		Arrays.sort(strArr, (String s1, String s2) -> s1.compareTo(s2));
 		Assert.assertArrayEquals(new String[]{"A", "B", "C"}, strArr);
 	}
 	
 	@Test
 	public void testLambdaReference(){
-		Function<Person, String> fn = person -> person.getFullName();
+		Function<Person, String> fn = (person) -> person.getFullName();
 		Person person = new Person("Amandeep", "Singh");
 		Assert.assertEquals("Amandeep Singh", fn.apply(person));
 		
