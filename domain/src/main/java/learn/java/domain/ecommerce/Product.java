@@ -13,4 +13,8 @@ public class Product {
         return id;
     }
 
+    public boolean check(){
+        return true;
+    }
+
 }

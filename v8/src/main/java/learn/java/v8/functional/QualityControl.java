@@ -11,8 +11,15 @@ public class QualityControl {
     public QualityControl() {
     }
 
-    public List<Product> execute(List<Product> products, final Predicate<Product> testCondition) {
+    public List<Product> execute1(List<Product> products, final Predicate<Product> testCondition) {
         List<Product> passed = products.stream().filter(product -> testCondition.test(product)).collect(Collectors.toList());
+        System.out.printf("Total Products %d", products.size());
+        System.out.printf("Products passed %d", passed.size());
+        return passed;
+    }
+
+    public List<Product> execute2(List<Product> products, final MyPredicate<Product> checkCondition) {
+        List<Product> passed = products.stream().filter(product -> checkCondition.check(product)).collect(Collectors.toList());
         System.out.printf("Total Products %d", products.size());
         System.out.printf("Products passed %d", passed.size());
         return passed;
