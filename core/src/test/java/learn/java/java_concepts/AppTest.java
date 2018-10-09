@@ -1,5 +1,6 @@
 package learn.java.java_concepts;
 
+import com.sun.org.apache.xpath.internal.operations.Bool;
 import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
@@ -33,6 +34,7 @@ public class AppTest
      */
     public void testApp()
     {
-        assertTrue( true );
+        assertFalse(Boolean.TRUE.equals(null));
+        assertTrue(Boolean.TRUE.equals(true));
     }
 }
