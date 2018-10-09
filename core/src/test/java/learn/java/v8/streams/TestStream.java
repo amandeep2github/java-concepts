@@ -48,7 +48,7 @@ public class TestStream {
 		//assertEquals(4, sum);
 		System.out.println(list.stream().filter(ele -> ele.equals("2")).mapToInt(t -> Integer.getInteger(t)));
 		list.stream().filter(ele -> ele.equals("2")).mapToInt(t -> Integer.getInteger(t)).forEach(
-				t ->System.out.println(t)
+				System.out::println
 				);
 		
 	}

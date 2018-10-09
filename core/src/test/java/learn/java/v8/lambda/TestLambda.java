@@ -3,8 +3,10 @@ package learn.java.v8.lambda;
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 import java.util.Arrays;
+import java.util.List;
 import java.util.function.Consumer;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
 import org.junit.Assert;
 import org.junit.Test;
@@ -44,6 +46,16 @@ public class TestLambda {
 		cons.accept("Amandeep Singh");
 		Assert.assertEquals("Amandeep Singh", bos.toString());
 		
+	}
+
+	@Test
+	public void testReduce(){
+		List<Integer> integerList = Arrays.asList(1 ,2, 3, 4, 5);
+		Integer reduce1 = integerList.stream().reduce(0, (a, b) -> a + b);
+		Assert.assertEquals(15, reduce1.intValue());
+
+		Integer sum = integerList.stream().collect(Collectors.summingInt(ele -> ele));
+		Assert.assertEquals(15, sum.intValue());
 	}
 	
 
