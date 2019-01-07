@@ -1,11 +1,16 @@
 package learn.java.v8.functional;
 
 import learn.java.domain.ecommerce.MobilePhone;
+import learn.java.domain.ecommerce.Perfume;
 import learn.java.domain.ecommerce.Product;
+import learn.java.domain.ecommerce.types.PerfumeType;
 import org.junit.Test;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.function.Supplier;
+
 import static org.assertj.core.api.Assertions.*;
 
 public class QualityControlTest {
@@ -70,6 +75,17 @@ public class QualityControlTest {
         assertThat(mobilePhonesTotal).size().isEqualTo(2);
         assertThat(mobilePhonesPassed).size().isEqualTo(1);
 
+
+    }
+
+    @Test
+    public void testMethodWithDiffNames(){
+        List<Supplier<Object>> funcs = new ArrayList<>();
+        MobilePhone mb = new MobilePhone(6);
+        Perfume perf = new Perfume(PerfumeType.CITRUS);
+        funcs.add(mb::getScreenSize);
+        funcs.add(perf::getPerfumeType);
+        funcs.forEach( subFunc -> System.out.println(subFunc.get()));
 
     }
 }

@@ -19,7 +19,8 @@ public class QualityControl {
     }
 
     public List<Product> execute2(List<Product> products, final MyPredicate<Product> checkCondition) {
-        List<Product> passed = products.stream().filter(product -> checkCondition.check(product)).collect(Collectors.toList());
+        List<Product> passed = products.stream().filter(product ->
+                checkCondition.check(product)).collect(Collectors.toList());
         System.out.printf("Total Products %d", products.size());
         System.out.printf("Products passed %d", passed.size());
         return passed;

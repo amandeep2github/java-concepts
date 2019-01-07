@@ -6,4 +6,8 @@ public class TemperedGlass extends Product {
     public TemperedGlass(float thicknessInMM) {
         this.thicknessInMM = thicknessInMM;
     }
+
+    public float getThicknessInMM() {
+        return thicknessInMM;
+    }
 }

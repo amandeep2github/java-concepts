@@ -8,4 +8,8 @@ public class Perfume extends Product {
     public Perfume(PerfumeType perfumeType) {
         this.perfumeType = perfumeType;
     }
+
+    public PerfumeType getPerfumeType() {
+        return perfumeType;
+    }
 }
