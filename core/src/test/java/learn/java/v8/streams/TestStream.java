@@ -4,6 +4,9 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.function.Consumer;
+import java.util.function.Function;
+import java.util.function.Predicate;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -32,8 +35,12 @@ public class TestStream {
 		String arr [] = new String[]{"1","2","1","3","4","2"};
 		
 		List<String> list = Arrays.asList(arr);
-		Arrays.asList(arr).stream().forEach(val-> System.out.print(val));
-		Stream<String> filtered = list.stream().filter(ele -> ele.equals("2"));
+		Arrays.asList(arr).stream().forEach(val-> System.out.println(val));
+		Stream<String> filtered = list.stream().filter(ele -> ele.equals("2"));//ele -> ele.equals("2")
+		Predicate<String> pred = "2"::equals;//(ele) -> ele.equals("2");
+		Function<String, Boolean> function = "2"::equals;
+
+		System.out.println("pred - "+pred.test("2"));
 		//filtered.forEach(t-> System.out.println(t));
 		assertEquals("2", filtered.findFirst().get());
 		//assertEquals("2", filtered.count());

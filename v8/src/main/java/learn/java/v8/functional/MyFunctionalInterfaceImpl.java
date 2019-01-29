@@ -1,4 +1,4 @@
-package learn.java.v8.lambda;
+package learn.java.v8.functional;
 
 public class MyFunctionalInterfaceImpl implements MyFunctionalInterface {
 

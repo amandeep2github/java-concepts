@@ -1,4 +1,4 @@
-package learn.java.v8.functionalprogramming.templateclass;
+package learn.java.v8.functional;
 
 public class CompetitionEntryCheckWithoutFP {
 	public boolean canParticipate(Spicies spicies, boolean checkHop){

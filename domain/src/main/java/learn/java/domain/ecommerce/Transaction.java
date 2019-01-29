@@ -1,4 +1,4 @@
-package learn.java.java_concepts.reflection;
+package learn.java.domain.ecommerce;
 
 public class Transaction {
 	private String trnCd;

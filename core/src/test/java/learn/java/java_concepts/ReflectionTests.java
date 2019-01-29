@@ -1,4 +1,4 @@
-package learn.java.java_concepts.reflection;
+package learn.java.java_concepts;
 
 import static org.junit.Assert.*;
 
@@ -9,6 +9,7 @@ import java.beans.PropertyDescriptor;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
+import learn.java.domain.ecommerce.Transaction;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
