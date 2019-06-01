@@ -22,6 +22,7 @@ public class StudentTest {
 
         assertThat(BigDecimal.valueOf(1.445354).setScale(5, BigDecimal.ROUND_HALF_EVEN).doubleValue()).isEqualTo(1.44535);
         assertThat(BigDecimal.valueOf(1.445356).setScale(5, BigDecimal.ROUND_HALF_EVEN).doubleValue()).isEqualTo(1.44536);
+        System.out.println(Runtime.getRuntime().availableProcessors());
 
     }
 

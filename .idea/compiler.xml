@@ -13,6 +13,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="algorithms" target="1.8" />
       <module name="concurrency" target="1.8" />
       <module name="core" target="1.8" />
       <module name="domain" target="1.8" />
