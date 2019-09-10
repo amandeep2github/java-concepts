@@ -11,6 +11,14 @@
 
     <artifactId>domain</artifactId>
     <packaging>jar</packaging>
+    <!-- https://mvnrepository.com/artifact/commons-lang/commons-lang -->
+    <dependencies>
+    <dependency>
+        <groupId>commons-lang</groupId>
+        <artifactId>commons-lang</artifactId>
+        <version>2.2</version>
+    </dependency>
+    </dependencies>
 
 
 </project>
