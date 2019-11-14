@@ -1,6 +1,6 @@
 package learn.java.java_concepts;
 
-import learn.java.v8.lambda.Util;
+//import learn.java.v8.lambda.Util;
 
 import java.util.function.Supplier;
 
@@ -21,8 +21,8 @@ public class App {
                 callMe(param);
             }
         };
-        Supplier<String> hello = Util::hello;
-        System.out.println(hello.get());
+//        Supplier<String> hello = Util::hello;
+//        System.out.println(hello.get());
     }
 
 

@@ -17,6 +17,12 @@ public class ForkJoinPoolExecutor {
     public static void main(String[] args) throws InterruptedException, ExecutionException {
         InputStream stream = ForkJoinPoolExecutor.class.getClassLoader().
                 getResourceAsStream("logging.properties");
+        new Thread(()->{
+            String str = "Amandeep";
+
+
+        }).start();
+        Object obj = new Object();
         try {
             LogManager.getLogManager().readConfiguration(stream);
         } catch (IOException e) {
@@ -35,6 +41,9 @@ public class ForkJoinPoolExecutor {
         });
         output.get();
         LOGGER.info("done");
+        while(true){
+            Thread.sleep(100000);
+        }
     }
 
     private static List<String> createList() {
