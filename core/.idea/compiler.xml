@@ -6,17 +6,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="algorithms" />
-        <module name="concurrency" />
         <module name="core" />
-        <module name="domain" />
-        <module name="server" />
-        <module name="v8" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="java-concepts" target="1.8" />
-      <module name="learn.java" target="1.8" />
+      <module name="core" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
